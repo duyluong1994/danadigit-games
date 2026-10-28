@@ -1,0 +1,34 @@
+/* Mossbrook theme: mossy forest, honey and parchment. Colors match src/ui/kit.ts in the game.
+   Linked after ../style.css. */
+
+:root {
+  --bg: #1f2a1c;
+  --bg-2: #2e4a2a;
+  --panel: rgba(46, 74, 42, 0.62);
+  --panel-edge: rgba(168, 201, 120, 0.35);
+  --text: #fff7e6;
+  --dim: #d8ccb0;
+  --accent: #f2b84b;
+  --accent-ink: #3b2a1a;
+  --heading: #ffd36b;
+  --glow: rgba(242, 184, 75, 0.2);
+  --serif: Georgia, "Times New Roman", serif;
+  --bullet: "🍂";
+}
+
+/* Drifting fireflies behind everything. */
+body::before {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1;
+  background-image:
+    radial-gradient(3px 3px at 14% 22%, rgba(255,243,160,.75), transparent 70%),
+    radial-gradient(2px 2px at 31% 64%, rgba(255,243,160,.55), transparent 70%),
+    radial-gradient(3px 3px at 52% 14%, rgba(255,243,160,.6), transparent 70%),
+    radial-gradient(2px 2px at 69% 47%, rgba(255,243,160,.5), transparent 70%),
+    radial-gradient(3px 3px at 84% 26%, rgba(255,243,160,.7), transparent 70%),
+    radial-gradient(2px 2px at 9% 82%, rgba(255,243,160,.45), transparent 70%);
+  background-size: 720px 720px;
+}
+body { position: relative; z-index: 0; }
+
+.game-hero { background-image: linear-gradient(180deg, #3d6b4b 0%, #7fa36a 55%, #e9c77b 100%); }
+.game-hero::before { background: linear-gradient(180deg, rgba(31,42,28,0) 25%, rgba(31,42,28,.92) 90%); }
