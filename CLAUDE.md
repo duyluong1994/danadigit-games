@@ -24,3 +24,4 @@ Static site (plain HTML/CSS, no build step) that hosts the support and privacy p
   ```
 - App Store button: label "Coming soon to the App Store" until `https://itunes.apple.com/lookup?id=<appId>` returns a result, then "Download on the App Store" and add `<meta name="apple-itunes-app" content="app-id=<appId>">` to that game's pages.
 - Preview locally: `python3 -m http.server` from this folder, then check 390px and 1280px widths.
+- Pages serve CSS with `max-age=600`, so returning visitors keep the old file. After any CSS change, bump the `?v=N` query on every `style.css` link.
