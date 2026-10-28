@@ -1,7 +1,36 @@
-:root { color-scheme: dark; }
-body { margin: 0; background: #0d0b24; color: #f3e9ff; font: 17px/1.6 -apple-system, "Helvetica Neue", Arial, sans-serif; }
-main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
-h1 { font-family: Georgia, serif; color: #ffd27a; font-weight: normal; font-size: 34px; margin: 0 0 8px; }
-h2 { font-family: Georgia, serif; color: #ffd27a; font-weight: normal; margin-top: 32px; }
-a { color: #ffb347; }
-.dim { color: #b9a9e6; }
+/* Lantern Drift theme: night lake, amber lanterns. Colors match src/ui/kit.ts in the game.
+   Linked after ../style.css. */
+
+:root {
+  --bg: #0d0b24;
+  --bg-2: #1d1745;
+  --panel: rgba(29, 23, 69, 0.62);
+  --panel-edge: rgba(106, 90, 205, 0.45);
+  --text: #f3e9ff;
+  --dim: #b9a9e6;
+  --accent: #ffb347;
+  --accent-ink: #2a1600;
+  --heading: #ffd27a;
+  --glow: rgba(255, 179, 71, 0.22);
+  --serif: Georgia, "Times New Roman", serif;
+  --bullet: "✦";
+}
+
+/* Faint star field behind everything. */
+body::before {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1;
+  background-image:
+    radial-gradient(1.2px 1.2px at 12% 18%, rgba(255,255,255,.7), transparent 60%),
+    radial-gradient(1px 1px at 28% 62%, rgba(255,255,255,.5), transparent 60%),
+    radial-gradient(1.4px 1.4px at 46% 12%, rgba(255,255,255,.65), transparent 60%),
+    radial-gradient(1px 1px at 63% 44%, rgba(255,255,255,.45), transparent 60%),
+    radial-gradient(1.3px 1.3px at 78% 22%, rgba(255,255,255,.7), transparent 60%),
+    radial-gradient(1px 1px at 88% 70%, rgba(255,255,255,.5), transparent 60%),
+    radial-gradient(1px 1px at 8% 84%, rgba(255,255,255,.4), transparent 60%),
+    radial-gradient(1.2px 1.2px at 55% 88%, rgba(255,255,255,.45), transparent 60%);
+  background-size: 640px 640px;
+}
+body { position: relative; z-index: 0; }
+
+.game-hero { background-image: url("img/hero.webp"); background-position: center 35%; }
+.game-hero::before { background: linear-gradient(180deg, rgba(13,11,36,0) 25%, rgba(13,11,36,.92) 90%); }

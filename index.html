@@ -3,12 +3,126 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Danadigit Games</title>
+<meta name="description" content="Danadigit Games makes small, calm, offline games for iPhone. No ads, no accounts, no data collected.">
+<meta name="theme-color" content="#0f1020">
+<meta property="og:title" content="Danadigit Games">
+<meta property="og:description" content="Small, calm, offline games for iPhone.">
+<meta property="og:image" content="https://games.danadigit.com/lantern-drift/img/og.jpg">
+<meta property="og:url" content="https://games.danadigit.com/">
+<link rel="icon" type="image/svg+xml" href="img/logo.svg">
+<link rel="apple-touch-icon" href="lantern-drift/img/apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Per-game card palettes. Each mirrors that game's own theme. */
+  .card--lantern-drift {
+    --card-bg: linear-gradient(180deg, #18133c 45%, #0d0b24);
+    --card-bg-solid: #120f30;
+    --card-edge: rgba(106, 90, 205, 0.45);
+    --card-heading: #ffd27a; --card-dim: #b9a9e6; --card-accent: #ffb347;
+  }
+  .card--lantern-drift .card-art { background-image: url("lantern-drift/img/hero.webp"); background-position: center 40%; }
+  .card--lantern-drift .card-art::after { background: linear-gradient(180deg, transparent 40%, #18133c 100%); }
+
+  .card--mossbrook {
+    --card-bg: linear-gradient(180deg, #1f3a2a 45%, #13241a);
+    --card-bg-solid: #1c3526;
+    --card-edge: rgba(168, 201, 120, 0.35);
+    --card-heading: #f4d58d; --card-dim: #b9cfa6; --card-accent: #f2b84b;
+  }
+  .card--mossbrook .card-art { background: linear-gradient(180deg, #3d6b4b 0%, #7fa36a 55%, #e9c77b 100%); }
+  .card--mossbrook .card-art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .card--mossbrook .card-art::after { background: linear-gradient(180deg, transparent 45%, #1f3a2a 100%); }
+  .card--mossbrook .card-icon { background: linear-gradient(160deg, #3f7350, #1f3a2a); display: grid; place-items: center; }
+  .card--mossbrook .badge { color: #f2b84b; border-color: rgba(242, 184, 75, 0.4); background: rgba(242, 184, 75, 0.08); }
+</style>
 </head>
-<body><main>
-<h1>Danadigit Games</h1>
-<p class="dim">Small, calm games for iPhone.</p>
-<h2><a href="lantern-drift/">Lantern Drift</a></h2>
-<p>A quiet logic puzzle: light one lantern in every row, column and pond. · <a href="lantern-drift/privacy.html">Privacy</a></p>
-</main></body>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <a class="brand" href="./"><img src="img/logo.svg" alt="">Danadigit Games</a>
+    <nav><a href="#games">Games</a><a href="https://github.com/duyluong1994/danadigit-games/issues">Contact</a></nav>
+  </header>
+
+  <section class="studio-hero">
+    <h1>Small, calm games for iPhone</h1>
+    <p class="dim">We make quiet, handcrafted games you can pick up for five minutes and put down without guilt.</p>
+    <div class="pillars">
+      <span class="badge">Fully offline</span>
+      <span class="badge">No ads</span>
+      <span class="badge">No accounts</span>
+      <span class="badge">No data collected</span>
+    </div>
+  </section>
+
+  <section class="games" id="games" aria-label="Games">
+    <article class="card card--lantern-drift">
+      <div class="card-art" role="img" aria-label="Paper lanterns rising over a night lake"></div>
+      <div class="card-body">
+        <div class="card-head">
+          <img class="card-icon" src="lantern-drift/img/icon-256.png" alt="" width="76" height="76">
+          <div>
+            <span class="badge live">Logic puzzle</span>
+            <h3><a class="stretch" href="lantern-drift/" style="color:inherit;text-decoration:none">Lantern Drift</a></h3>
+          </div>
+        </div>
+        <p>A quiet logic puzzle: light one lantern in every row, column and pond. 120 puzzles, a Daily Lantern every night and a Sky Atlas to fill with stars.</p>
+        <div class="links">
+          <a href="lantern-drift/">Support</a>
+          <a href="lantern-drift/privacy.html">Privacy</a>
+          <a href="https://apps.apple.com/app/id6827719328">App Store</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card--mossbrook">
+      <div class="card-art" aria-hidden="true">
+        <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+          <path d="M0 120 Q80 80 160 110 T320 100 T400 105 V200 H0z" fill="#4f7d55" opacity=".8"/>
+          <g fill="#2e5639">
+            <path d="M40 140 l18 -60 l18 60z"/><path d="M70 145 l14 -46 l14 46z"/>
+            <path d="M318 138 l20 -66 l20 66z"/><path d="M350 146 l14 -44 l14 44z"/>
+          </g>
+          <path d="M0 150 Q100 125 200 145 T400 140 V200 H0z" fill="#3b6845"/>
+          <g transform="translate(176 92)">
+            <rect x="14" y="34" width="22" height="30" rx="4" fill="#f3e2c0"/>
+            <rect x="21" y="46" width="8" height="18" rx="4" fill="#7a4a2a"/>
+            <path d="M0 38 Q25 -6 50 38z" fill="#c8553d"/>
+            <circle cx="16" cy="24" r="4" fill="#f7ead2"/><circle cx="32" cy="18" r="3" fill="#f7ead2"/><circle cx="38" cy="30" r="3.5" fill="#f7ead2"/>
+          </g>
+          <g transform="translate(236 118) scale(.6)">
+            <rect x="14" y="34" width="22" height="30" rx="4" fill="#f3e2c0"/>
+            <path d="M0 38 Q25 -6 50 38z" fill="#d9a441"/>
+            <circle cx="20" cy="22" r="4" fill="#f7ead2"/>
+          </g>
+          <g fill="#ffe9a8">
+            <circle cx="120" cy="70" r="2.2" opacity=".9"/><circle cx="150" cy="52" r="1.6" opacity=".7"/>
+            <circle cx="268" cy="64" r="2" opacity=".85"/><circle cx="296" cy="88" r="1.5" opacity=".7"/>
+            <circle cx="210" cy="40" r="1.8" opacity=".8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="card-head">
+          <div class="card-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-4.5 0-8 3.2-8 7h16c0-3.8-3.5-7-8-7z" fill="#c8553d"/><circle cx="9" cy="7" r="1.2" fill="#f7ead2"/><circle cx="14.5" cy="6" r="1" fill="#f7ead2"/><rect x="9.5" y="10" width="5" height="9" rx="2" fill="#f3e2c0"/></svg>
+          </div>
+          <div>
+            <span class="badge">In development</span>
+            <h3>Mossbrook</h3>
+          </div>
+        </div>
+        <p>A cozy forest-village game: grow, bake and craft for the woodland folk, and clear brambles in gentle match-3 levels as the seasons turn.</p>
+        <div class="links"><span style="color:var(--card-dim)">Coming to iPhone</span></div>
+      </div>
+    </article>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Duy Luong Duc · Danadigit Games</span>
+    <nav><a href="https://github.com/duyluong1994/danadigit-games/issues">Contact</a></nav>
+  </div>
+</footer>
+</body>
 </html>
