@@ -1,0 +1,7 @@
+:root { color-scheme: dark; }
+body { margin: 0; background: #0d0b24; color: #f3e9ff; font: 17px/1.6 -apple-system, "Helvetica Neue", Arial, sans-serif; }
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+h1 { font-family: Georgia, serif; color: #ffd27a; font-weight: normal; font-size: 34px; margin: 0 0 8px; }
+h2 { font-family: Georgia, serif; color: #ffd27a; font-weight: normal; margin-top: 32px; }
+a { color: #ffb347; }
+.dim { color: #b9a9e6; }
