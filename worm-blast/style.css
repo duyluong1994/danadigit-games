@@ -1,0 +1,36 @@
+/* Worm Blast theme: cartoon sky, dirt and bazooka orange. Colors match src/ui.js + the logo in the game.
+   Linked after ../style.css. */
+
+:root {
+  --bg: #0d1b2a;
+  --bg-2: #1b3a5c;
+  --panel: rgba(27, 58, 92, 0.62);
+  --panel-edge: rgba(143, 211, 255, 0.35);
+  --text: #f1f7ff;
+  --dim: #b7cfe6;
+  --accent: #ff8c2a;
+  --accent-ink: #2a1600;
+  --heading: #ffd54f;
+  --glow: rgba(255, 140, 42, 0.22);
+  --serif: "Baloo 2", "Trebuchet MS", Georgia, serif;
+  --bullet: "💥";
+}
+
+/* Drifting cartoon clouds behind everything. */
+body::before {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1;
+  background-image:
+    radial-gradient(60px 26px at 12% 18%, rgba(255,255,255,.08), transparent 70%),
+    radial-gradient(90px 36px at 38% 62%, rgba(255,255,255,.06), transparent 70%),
+    radial-gradient(70px 30px at 66% 14%, rgba(255,255,255,.08), transparent 70%),
+    radial-gradient(100px 40px at 86% 48%, rgba(255,255,255,.06), transparent 70%);
+  background-size: 900px 900px;
+}
+body { position: relative; z-index: 0; }
+
+.game-hero { background-image: url("img/hero.webp"); background-position: center 30%; }
+.game-hero::before { background: linear-gradient(180deg, rgba(13,27,42,0) 30%, rgba(13,27,42,.92) 92%); }
+
+/* Landscape screenshots (the shared strip assumes portrait phones). */
+.shots { grid-auto-columns: minmax(300px, 1fr); }
+.shots img { aspect-ratio: 2868 / 1320; }
