@@ -1,0 +1,20 @@
+/* Sand Flip theme: sunset desert sand and hourglass wood. Colors match src/ui.js + the logo in the game.
+   Linked after ../style.css. */
+
+:root {
+  --bg: #2b1b4a;
+  --bg-2: #6b3a5a;
+  --panel: rgba(91, 46, 72, 0.62);
+  --panel-edge: rgba(255, 204, 128, 0.38);
+  --text: #fff6ec;
+  --dim: #f0cdb4;
+  --accent: #ffb300;
+  --accent-ink: #3a2200;
+  --heading: #ffd27f;
+  --glow: rgba(255, 179, 0, 0.22);
+  --serif: "Baloo 2", "Trebuchet MS", Georgia, serif;
+  --bullet: "⏳";
+}
+
+.game-hero { background-image: url("img/hero.webp"); background-position: center 40%; }
+.game-hero::before { background: linear-gradient(180deg, rgba(43,27,74,0) 30%, rgba(43,27,74,.92) 92%); }
