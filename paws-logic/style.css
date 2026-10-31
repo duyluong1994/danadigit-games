@@ -1,0 +1,20 @@
+/* Paws Logic theme: sunny backyard green, kitten orange and puppy brown. Colors match the logo in the game.
+   Linked after ../style.css. */
+
+:root {
+  --bg: #2f4f22;
+  --bg-2: #4c7a35;
+  --panel: rgba(47, 79, 34, 0.62);
+  --panel-edge: rgba(255, 209, 128, 0.38);
+  --text: #fffaf0;
+  --dim: #e3efd2;
+  --accent: #ff9d2e;
+  --accent-ink: #3a2200;
+  --heading: #ffd180;
+  --glow: rgba(255, 157, 46, 0.22);
+  --serif: "Baloo 2", "Trebuchet MS", Georgia, serif;
+  --bullet: "🐾";
+}
+
+.game-hero { background-image: url("img/hero.webp"); background-position: center 45%; }
+.game-hero::before { background: linear-gradient(180deg, rgba(47,79,34,0) 30%, rgba(47,79,34,.92) 92%); }
